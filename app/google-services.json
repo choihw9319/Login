@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "793543904328",
+    "project_id": "gohangout2",
+    "storage_bucket": "gohangout2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:793543904328:android:ee7c59384609a27f649c7d",
+        "android_client_info": {
+          "package_name": "kr.kwj.loogin"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBf_MCxA_KnGHBndG2TRFybxMLiLHOsU_c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

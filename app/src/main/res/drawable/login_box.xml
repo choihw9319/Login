@@ -1,0 +1,12 @@
+<!-- res/drawable/rounded_edittext.xml -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="rectangle">
+            <corners android:radius="16dp" />
+            <stroke
+                android:width="2dp"
+                android:color="#333ccc" /> <!-- 보라색 외곽선 -->
+            <solid android:color="#FFFFFF" /> <!-- 배경색 (흰색으로 설정됨) -->
+        </shape>
+    </item>
+</selector>
