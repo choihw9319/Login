@@ -4,39 +4,92 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:background="@drawable/img">
+    android:padding="16dp"
+    android:background="@color/white">
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/textView2"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_marginTop="225dp"
+        android:layout_height="200dp"
         android:gravity="center"
-        android:text="놀러가자!"
-        android:textColor="@color/white"
-        android:textSize="40dp"
+        android:text="로그인"
+        android:textSize="50dp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-
-    <Button
-        android:id="@+id/Login_socialbtnbool"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:layout_marginBottom="164dp"
-        android:background="#00ff0000"
-        android:text="소셜 로그인"
-        android:textColor="@color/white"
-        android:textSize="30dp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_height="500dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        android:orientation="vertical">
+
+
+        <EditText
+            android:layout_gravity="center"
+            android:id="@+id/social_idint"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/login_box"
+            android:hint="아이디"
+            android:padding="10dp"
+            android:layout_marginBottom="40dp"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="233dp" />
+
+        <EditText
+            android:layout_gravity="center"
+            android:id="@+id/social_homeint"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/login_box"
+            android:hint="사는 곳"
+            android:padding="10dp"
+            android:layout_marginBottom="40dp"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="233dp" />
+
+        <EditText
+            android:layout_gravity="center"
+            android:id="@+id/social_favoritint"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/login_box"
+            android:hint="자주가는곳"
+            android:padding="10dp"
+            android:layout_marginBottom="100dp"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="233dp" />
+
+
+        <Button
+            android:id="@+id/login"
+            android:layout_width="320dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:background="@drawable/login_box"
+            android:text="로그인"
+            android:layout_marginBottom="10dp"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/signeup"
+            android:layout_width="320dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:background="@drawable/round_button"
+            android:text="회원가입"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+
+
+    </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
