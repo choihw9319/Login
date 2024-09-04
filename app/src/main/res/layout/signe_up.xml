@@ -30,36 +30,72 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="80dp"
-            android:orientation="horizontal">
+            android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
 
             <EditText
-                android:id="@+id/social_idint"
+                android:id="@+id/social_idint2"
                 android:layout_width="200dp"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="60dp"
                 android:background="@drawable/login_box"
-                android:layout_marginLeft="40dp"
                 android:hint="아이디"
                 android:padding="10dp"
                 tools:layout_editor_absoluteX="16dp"
                 tools:layout_editor_absoluteY="233dp" />
 
             <Button
-                android:layout_marginLeft="10dp"
+                android:id="@+id/check"
                 android:layout_width="80dp"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
                 android:background="@drawable/round_button"
                 android:text="중복체크"
                 android:textColor="@color/white"
-                android:textStyle="bold"/>
-
-
+                android:textStyle="bold" />
 
         </LinearLayout>
 
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/textViewno"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="이미 존재하는 아이디입니다!"
+                    android:textSize="10dp"
+                    android:layout_marginRight="75dp"
+                    android:layout_marginBottom="10dp"
+                    android:textStyle="bold"
+                    android:visibility="gone"
+                    android:textColor="#FF0000"
+                    android:layout_gravity="center" />
+
+                <TextView
+                    android:id="@+id/textViewok"
+                    android:visibility="gone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textStyle="bold"
+                    android:layout_marginRight="75dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="사용 가능한 아이디입니다!"
+                    android:textColor="#0000FF"
+                    android:textSize="10dp" />
+
+            </FrameLayout>
+
+        </LinearLayout>
 
         <EditText
             android:layout_gravity="center"
-            android:id="@+id/social_homeint"
+            android:id="@+id/social_homeint2"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:background="@drawable/login_box"
@@ -71,7 +107,7 @@
 
         <EditText
             android:layout_gravity="center"
-            android:id="@+id/social_favoritint"
+            android:id="@+id/social_favoritint2"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:background="@drawable/login_box"
@@ -83,6 +119,7 @@
 
 
         <Button
+            android:id="@+id/signeup_dialog"
             android:layout_width="320dp"
             android:layout_height="50dp"
             android:layout_gravity="center"
