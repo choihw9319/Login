@@ -25,8 +25,7 @@ import java.io.OutputStreamWriter;
 public class MainActivity extends AppCompatActivity {
 
     private EditText socialIdEditText;
-    private EditText socialHomeEditText;
-    private EditText socialFavoritEditText;
+
     private static final String TAG = "MainActivity"; // 로그 태그
 
     @Override
@@ -36,13 +35,10 @@ public class MainActivity extends AppCompatActivity {
 
         // activity_main.xml에 정의된 EditText들을 참조
         socialIdEditText = findViewById(R.id.social_idint);
-        socialHomeEditText = findViewById(R.id.social_homeint);
-        socialFavoritEditText = findViewById(R.id.social_favoritint);
 
         // 각 EditText에 TextWatcher를 설정
         setTextWatcher(socialIdEditText);
-        setTextWatcher(socialHomeEditText);
-        setTextWatcher(socialFavoritEditText);
+
 
         // "회원가입" 버튼 클릭 리스너 설정
         Button socialButton = findViewById(R.id.signeup);
@@ -117,6 +113,8 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+    // TODO : 서버랑 연결해서 중복 확인
+    // get 통해서 아이디 를 준 후 중복값인지 아닌지 판별
     private boolean isIdDuplicated(String id) {
         try {
             FileInputStream fileInputStream = openFileInput("user_data.json");
@@ -141,6 +139,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    // TODO : 서버랑 연결해서 데이터 post
     private void saveDialogValuesToJson(String id, String home, String favorit) {
         // JSON 객체 생성
         JSONObject jsonObject = new JSONObject();
@@ -168,8 +167,6 @@ public class MainActivity extends AppCompatActivity {
         JSONObject jsonObject = new JSONObject();
         try {
             jsonObject.put("아이디", socialIdEditText.getText().toString());
-            jsonObject.put("사는 곳", socialHomeEditText.getText().toString());
-            jsonObject.put("자주 가는 곳", socialFavoritEditText.getText().toString());
 
             // JSON 파일로 저장
             FileOutputStream fileOutputStream = openFileOutput("user_data.json", MODE_PRIVATE);
@@ -222,8 +219,6 @@ public class MainActivity extends AppCompatActivity {
             public void afterTextChanged(Editable s) {
                 // 텍스트 변경 후, 모든 EditText의 값을 로그에 출력
                 String socialId = socialIdEditText.getText().toString();
-                String socialHome = socialHomeEditText.getText().toString();
-                String socialFavorit = socialFavoritEditText.getText().toString();
             }
 
         });
