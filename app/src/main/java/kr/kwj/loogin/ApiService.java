@@ -10,7 +10,7 @@ public interface ApiService {
     @POST("/account/create/")
     Call<PostData> createPost(@Body PostData postData);
 
-    @GET("/account/find/") // GET 요청 예제
-    Call<GET> getUser(@Path("id") String userId);
+    @GET("/account/find/") // GET 요청 예
+    Call<ServerIdResponse> getServerId();
 }
 
