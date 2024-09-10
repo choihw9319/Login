@@ -92,6 +92,18 @@
             </FrameLayout>
 
         </LinearLayout>
+        <EditText
+            android:layout_gravity="center"
+            android:id="@+id/social_email"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/login_box"
+            android:hint="이메일"
+            android:padding="10dp"
+            android:layout_marginBottom="40dp"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="233dp" />
+
 
         <EditText
             android:layout_gravity="center"
